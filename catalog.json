@@ -1,0 +1,155 @@
+[
+  {
+    "slug": "01-3d-logo",
+    "title": "3D logo animation",
+    "amount": 75,
+    "scope": "A five-second reveal from a supplied authorized logo; MP4 and Blender source.",
+    "ready": false,
+    "status": "Feasibility inquiry",
+    "price": "Indicative budget: $75+"
+  },
+  {
+    "slug": "02-product-animation",
+    "title": "Simple product animation",
+    "amount": 90,
+    "scope": "One five-to-ten-second turntable from supplied neutral-format geometry.",
+    "ready": false,
+    "status": "Feasibility inquiry",
+    "price": "Indicative budget: $90+"
+  },
+  {
+    "slug": "03-product-stills",
+    "title": "Product stills",
+    "amount": 60,
+    "scope": "One simple product view using supplied geometry and material references.",
+    "ready": false,
+    "status": "Feasibility inquiry",
+    "price": "Indicative budget: $60+"
+  },
+  {
+    "slug": "04-asset-cleanup",
+    "title": "3D asset cleanup",
+    "amount": 25,
+    "scope": "One simple prop: units, origin and normals check, neutral-format export and change notes.",
+    "ready": false,
+    "status": "Feasibility inquiry",
+    "price": "Indicative budget: $25+"
+  },
+  {
+    "slug": "05-character-loop",
+    "title": "Character animation loop",
+    "amount": 60,
+    "scope": "One short idle or gesture on a supplied compatible rig.",
+    "ready": false,
+    "status": "Feasibility inquiry",
+    "price": "Indicative budget: $60+"
+  },
+  {
+    "slug": "06-retargeting",
+    "title": "Short animation retarget",
+    "amount": 50,
+    "scope": "Transfer one supplied short action between two compatible humanoid rigs.",
+    "ready": false,
+    "status": "Feasibility inquiry",
+    "price": "Indicative budget: $50+"
+  },
+  {
+    "slug": "07-mocap-cleanup",
+    "title": "Short motion cleanup",
+    "amount": 50,
+    "scope": "One short existing take: loop seam or contact correction.",
+    "ready": false,
+    "status": "Feasibility inquiry",
+    "price": "Indicative budget: $50+"
+  },
+  {
+    "slug": "08-camera-track",
+    "title": "Single-shot camera tracking",
+    "amount": 60,
+    "scope": "A short footage suitability review followed by an agreed camera solve.",
+    "ready": false,
+    "status": "Feasibility inquiry",
+    "price": "Indicative budget: $60+"
+  },
+  {
+    "slug": "09-simple-vfx",
+    "title": "Simple video composite",
+    "amount": 40,
+    "scope": "One straightforward overlay or screen replacement from supplied assets.",
+    "ready": false,
+    "status": "Feasibility inquiry",
+    "price": "Indicative budget: $40+"
+  },
+  {
+    "slug": "10-short-video",
+    "title": "Short video edit",
+    "amount": 25,
+    "scope": "Up to 60 seconds finished video from up to 3 minutes supplied footage; clean cuts and one revision.",
+    "ready": false,
+    "status": "Feasibility inquiry",
+    "price": "Indicative budget: $25+"
+  },
+  {
+    "slug": "11-subtitle-text",
+    "title": "Subtitle text cleanup",
+    "amount": 10,
+    "scope": "Proofread one English SRT or VTT file up to 500 words against a supplied transcript; preserve timecodes; one revision.",
+    "ready": true,
+    "status": "Send your brief",
+    "price": "From $10"
+  },
+  {
+    "slug": "12-demo-script",
+    "title": "Software demo script and shot list",
+    "amount": 25,
+    "scope": "A script and shot list for a two-minute software demo from supplied product facts; up to 350 words; one revision.",
+    "ready": true,
+    "status": "Send your brief",
+    "price": "From $25"
+  },
+  {
+    "slug": "13-product-sheet",
+    "title": "One-page software product sheet",
+    "amount": 30,
+    "scope": "One-page PDF, up to 300 words of supplied copy and one supplied screenshot; one revision.",
+    "ready": true,
+    "status": "Send your brief",
+    "price": "From $30"
+  },
+  {
+    "slug": "14-svg-cleanup",
+    "title": "Simple SVG cleanup and recolor",
+    "amount": 15,
+    "scope": "One existing simple SVG: align shapes, standardize viewBox and deliver three agreed color variants; one revision.",
+    "ready": true,
+    "status": "Send your brief",
+    "price": "From $15"
+  },
+  {
+    "slug": "15-media-remux",
+    "title": "Small media remux or extraction",
+    "amount": 10,
+    "scope": "One supplied clip up to 100 MB, compatible stream copy or audio extraction; output and brief validation notes.",
+    "ready": false,
+    "status": "Feasibility inquiry",
+    "price": "Indicative budget: $10+"
+  },
+  {
+    "slug": "16-quickstart-guide",
+    "title": "Quick-start or troubleshooting guide",
+    "amount": 25,
+    "scope": "Up to 600 words from supplied sources, prerequisite checklist and one revision; Markdown or Google Doc.",
+    "ready": true,
+    "status": "Send your brief",
+    "price": "From $25"
+  },
+  {
+    "slug": "17-python-fix",
+    "title": "Small Python fix or CSV utility",
+    "amount": 25,
+    "scope": "One agreed reproducible issue or bounded CSV transformation, source code and relevant tests.",
+    "ready": true,
+    "status": "Send your brief",
+    "price": "From $25"
+  }
+]
