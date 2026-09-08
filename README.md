@@ -1,5 +1,40 @@
-# Hazim services
+# Hazim — individual services
 
-Public service scope pages. Six services accept briefs; eleven production scopes are feasibility inquiries. No checkout, contracts, payment collection or production reservations are created by these pages.
+Small projects with defined deliverables. Choose a service below and send your brief to **hamammalsalmy9@gmail.com**. Prices are in USD; final scope and turnaround are confirmed before payment.
 
-Original sample links are identified accurately. Contact requests go to the owner-authorized email. No analytics, paid API, credentials or third-party scripts.
+## Writing, design and software
+
+| Service | Starting price |
+|---|---:|
+| [Subtitle text cleanup](services/11-subtitle-text.md) | $10 |
+| [Software demo script and shot list](services/12-demo-script.md) | $25 |
+| [One-page software product sheet](services/13-product-sheet.md) | $30 |
+| [Simple SVG cleanup and recolor](services/14-svg-cleanup.md) | $15 |
+| [Quick-start or troubleshooting guide](services/16-quickstart-guide.md) | $25 |
+| [Small Python fix or CSV utility](services/17-python-fix.md) | $25 |
+
+## Video and 3D feasibility inquiries
+
+These scopes require a file and workflow review before production availability can be confirmed.
+
+| Service | Starting price |
+|---|---:|
+| [3D logo animation](services/01-3d-logo.md) | $75 |
+| [Simple product animation](services/02-product-animation.md) | $90 |
+| [Product stills](services/03-product-stills.md) | $60 |
+| [3D asset cleanup](services/04-asset-cleanup.md) | $25 |
+| [Character animation loop](services/05-character-loop.md) | $60 |
+| [Short animation retarget](services/06-retargeting.md) | $50 |
+| [Short motion cleanup](services/07-mocap-cleanup.md) | $50 |
+| [Single-shot camera tracking](services/08-camera-track.md) | $60 |
+| [Simple video composite](services/09-simple-vfx.md) | $40 |
+| [Short video edit](services/10-short-video.md) | $25 |
+| [Small media remux or extraction](services/15-media-remux.md) | $10 |
+
+## Work samples
+
+- [Two original one-page product sheets](https://github.com/ikoomm/software-brochure-samples)
+- [Technical writing sample](https://gist.github.com/ikoomm/06ef515824b384d7565017afb7de2509)
+- [Merged Python CLI fix](https://github.com/BasedHardware/omi/pull/12990)
+
+Portfolio samples are independent work, not claims of paid client engagements.
