@@ -33,8 +33,9 @@ These scopes require a file and workflow review before production availability c
 
 ## Work samples
 
+- [CSV validation and workflow gate](work-samples/csv-validation/README.md) — a runnable Python sample with synthetic input, explicit rejection reasons, and 12 focused tests.
+- [Merged Omi Python CLI bug fix](work-samples/omi-cli-config.md) — preserved unrelated settings during a CLI configuration edit, with a real-command regression test and the merged upstream PR.
 - [Two original one-page product sheets](https://github.com/ikoomm/software-brochure-samples)
 - [Technical writing sample](https://gist.github.com/ikoomm/06ef515824b384d7565017afb7de2509)
-- [Merged Python CLI fix](https://github.com/BasedHardware/omi/pull/12990)
 
-Portfolio samples are independent work, not claims of paid client engagements.
+These are independent samples and an open-source contribution. Project requirements and pricing are confirmed before work begins.

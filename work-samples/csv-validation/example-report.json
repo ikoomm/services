@@ -1,0 +1,25 @@
+{
+  "accepted": [
+    {
+      "id": "1",
+      "description": "Bolt, blue",
+      "amount": "2.50"
+    },
+    {
+      "id": "3",
+      "description": "Washer",
+      "amount": "0.10"
+    }
+  ],
+  "rejected": [
+    {
+      "record": 2,
+      "reason": "duplicate_id"
+    },
+    {
+      "record": 3,
+      "reason": "invalid_amount"
+    }
+  ],
+  "can_continue": false
+}

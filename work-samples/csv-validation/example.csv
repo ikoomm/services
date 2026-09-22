@@ -1,0 +1,5 @@
+id,description,amount
+1,"Bolt, blue",2.50
+1,Duplicate,3.00
+2,Invalid,NaN
+3,Washer,0.10
