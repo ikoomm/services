@@ -6,6 +6,7 @@ Small projects with defined deliverables. Choose a service below and send your b
 
 | Service | Starting price |
 |---|---:|
+| [Small CSV cleanup](services/18-csv-cleanup-mini.md) | $5 |
 | [Subtitle text cleanup](services/11-subtitle-text.md) | $10 |
 | [Software demo script and shot list](services/12-demo-script.md) | $25 |
 | [One-page software product sheet](services/13-product-sheet.md) | $30 |
