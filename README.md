@@ -2,6 +2,8 @@
 
 Small projects with defined deliverables. Choose a service below and send your brief to **hamammalsalmy9@gmail.com**. Prices are in USD; final scope and turnaround are confirmed before payment.
 
+Need one small CSV cleaned? [Request the $5 CSV cleanup on Ko-fi](https://ko-fi.com/c/9d55aafffc). Send anonymized sample rows and your cleanup rules through the request form; I will confirm the scope before starting.
+
 ## Writing, design and software
 
 | Service | Starting price |
