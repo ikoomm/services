@@ -10,4 +10,6 @@ You receive a cleaned CSV and a short change report. Ambiguous values are flagge
 
 [Email your brief](mailto:hamammalsalmy9@gmail.com?subject=Service%20inquiry%3A%20Small%20CSV%20cleanup). Please send only anonymized sample rows at first. I will confirm scope, price, delivery time and a suitable payment route before work begins.
 
+After we agree on the rules, you can [request this $5 service through Ko-fi](https://ko-fi.com/c/9d55aafffc). The published Ko-fi listing includes the same file and rule limits.
+
 [All services](../README.md)
