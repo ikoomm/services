@@ -1,5 +1,7 @@
 # Hazim — individual services
 
+If we met on a marketplace, keep messages, contracts and payments on that platform. The direct contact and Ko-fi options below are for independently sourced inquiries.
+
 Small projects with defined deliverables. Choose a service below and send your brief to **hamammalsalmy9@gmail.com**. Prices are in USD; final scope and turnaround are confirmed before payment.
 
 Need one small CSV cleaned? [Request the $5 CSV cleanup on Ko-fi](https://ko-fi.com/c/9d55aafffc). Send anonymized sample rows and your cleanup rules through the request form; I will confirm the scope before starting.
@@ -36,6 +38,7 @@ These scopes require a file and workflow review before production availability c
 
 ## Work samples
 
+- [20-second vertical website demo: two hook variants](samples/mora-product-ad/README.md) — actual independent UI, MP4 exports and editable composition; no client campaign or conversion claim.
 - [CSV validation and workflow gate](work-samples/csv-validation/README.md) — a runnable Python sample with synthetic input, explicit rejection reasons, and 12 focused tests.
 - [Merged Omi Python CLI bug fix](work-samples/omi-cli-config.md) — preserved unrelated settings during a CLI configuration edit, with a real-command regression test and the merged upstream PR.
 - [Two original one-page product sheets](https://github.com/ikoomm/software-brochure-samples)
