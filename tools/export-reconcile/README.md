@@ -6,6 +6,10 @@ Free, open-source, and offline. An independent demonstration by Hazim Alsalmi, u
 
 ![Export Reconcile preview with synthetic data](preview-desktop.png)
 
+## Try it in your browser
+
+**[Open Export Reconcile](https://ikoomm.github.io/services/)**, then choose **Try the sample data**. No account or installation is needed. Files are processed in your browser; their contents are not uploaded. For use without an internet connection, download the standalone app below.
+
 ## Use the standalone app
 
 1. Download **[Export-Reconcile.html](Export-Reconcile.html)**. On GitHub, open the file and choose **Download raw file**; do not save the repository's file-preview page.

@@ -38,7 +38,7 @@ These scopes require a file and workflow review before production availability c
 
 ## Free tools
 
-- [Export Reconcile](tools/export-reconcile/README.md) — compare recurring CSV exports by ID and date, preview updates/conflicts, and download a fresh master. Runs offline in a single HTML file. Optional scoped setup: $25.
+- [Try Export Reconcile](https://ikoomm.github.io/services/) — compare recurring CSV exports by ID and date, preview updates/conflicts, and download a fresh master. Processing stays in your browser. [Source and offline download](tools/export-reconcile/README.md). Optional scoped setup: $25.
 
 ## Work samples
 
