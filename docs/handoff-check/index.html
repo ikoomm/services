@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="افحص اكتمال نسخ ملفات التصميم العربية والإنجليزية، ورتّب أسماءها في حزمة ZIP مع سجل تسليم. تجربة مجانية تعمل محليًا في المتصفح.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>تسليم مرتب · Handoff Check</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">✓</span><span>تسليم مرتب <small dir="ltr">HANDOFF CHECK</small></span></a><div class="toplinks"><a href="#how">كيف تعمل؟</a><span class="local">الملفات تبقى في متصفحك</span></div></header>
+<main>
+<section class="hero"><div><p class="eyebrow">للمصممين والفرق ثنائية اللغة</p><h1>آخر مراجعة،<br><span>قبل «تفضل الملفات».</span></h1><p class="intro">حدّد النسخ المطلوبة، أضف ملفاتك، واكشف الناقص والمكرر. حمّل نسخًا مرتبة الأسماء مع سجل واضح للتسليم.</p><div class="hero-actions"><button id="demo" class="primary">جرّب مثالًا فيه أخطاء <span aria-hidden="true">←</span></button><button id="complete-demo" class="text-button">شاهد مثالًا مكتملًا</button></div><p class="fine">مجاني · بدون تسجيل · لا يعدّل ملفاتك الأصلية</p></div><aside class="hero-note"><span class="note-index">01 / READY TO HAND OFF</span><p>هل أرسلت النسخة الإنجليزية؟<br>أي ملف هو النهائي؟<br>هل نسيت مقاس القصة؟</p><div class="note-bottom">إجابات واضحة، قبل الإرسال.</div></aside></section>
+<div id="notice" role="status" aria-live="polite" class="notice" hidden></div>
+<section class="workspace" aria-label="تجهيز حزمة التسليم">
+<aside class="setup">
+  <div class="section-label"><span>01</span><h2>ما الذي ستسلّمه؟</h2></div>
+  <label for="project">اسم المشروع للأرشيف</label><input id="project" value="spring-campaign" maxlength="60" dir="auto" autocomplete="off">
+  <label for="expected">قائمة النسخ المطلوبة</label><p id="expected-help" class="hint">كل سطر: اسم الأصل، اللغة، الصيغة.<br><bdi>AR</bdi> عربي · <bdi>EN</bdi> إنجليزي · <bdi>BI</bdi> ثنائي اللغة. أضف المقاس للاسم عند الحاجة.</p>
+  <textarea id="expected" rows="7" spellcheck="false" dir="ltr" aria-describedby="expected-help">asset,language,format
+social-square,AR,svg
+social-square,EN,svg
+story,AR,svg
+story,EN,svg</textarea>
+  <div id="expected-errors" class="error-list" aria-live="polite"></div>
+  <button id="apply-list" class="secondary">تحديث القائمة والمطابقة</button>
+  <details><summary>الصيغ والحدود</summary><p>حتى 50 نسخة و50 ملفًا. أقصى حجم للملف 50 MB، وللمجموعة 100 MB. يدعم PNG، JPG، WEBP، PDF، SVG، PSD، AI، EPS، INDD وTIFF.</p><p>يفحص الأسماء والنسخ التي تحددها. لا يفتح محتوى التصميم ولا يفحص الخطوط أو جودة الترجمة أو جاهزية الطباعة.</p></details>
+  <div class="privacy-note"><strong>أنت تختار الملف النهائي.</strong><p>نقترح اللغة والإصدار والحالة من اسم الملف عندما تكون واضحة. لا نختار أحدث إصدار تلقائيًا ولا نعتبره معتمدًا من العميل. راجع الاقتراحات قبل التنزيل.</p></div>
+</aside>
+<div class="review">
+  <div class="review-heading"><div class="section-label"><span>02</span><h2>الملفات والمراجعة</h2></div><button id="clear-files" class="text-button">إزالة الملفات من الجلسة</button></div>
+  <label class="dropzone" id="dropzone" for="files"><span class="upload-symbol" aria-hidden="true">＋</span><strong>أضف ملفات التصميم هنا</strong><span>اسحبها أو اضغط للاختيار. لن تُرفع إلى خادم.</span><input type="file" id="files" multiple accept=".png,.jpg,.jpeg,.webp,.pdf,.svg,.psd,.ai,.eps,.indd,.tif,.tiff" aria-label="إضافة ملفات التصميم"></label>
+  <div class="stats" aria-live="polite"><div><strong id="stat-files">0</strong><span>ملف مضاف</span></div><div><strong id="stat-ready">0 / 4</strong><span>نسخة جاهزة</span></div><div><strong id="stat-issues">4</strong><span>ملاحظة تحتاج مراجعة</span></div></div>
+  <div id="file-list" class="file-list"><p class="empty">أضف ملفاتك أو جرّب المثال أعلاه.</p></div>
+  <div id="review-issues" class="issues" aria-live="polite"></div>
+  <div class="export-bar"><div><strong id="ready-label">الحزمة غير مكتملة</strong><p>ZIP يحتوي الملفات المختارة وسجلَي JSON وCSV ودليلًا مختصرًا.</p></div><button class="primary" id="download" disabled>تحميل حزمة التسليم ↓</button></div>
+  <p class="fine">التنزيل لا يرسل الملفات إلى العميل. أسماء الملفات والبيانات المختارة ستظهر داخل الحزمة؛ راجعها قبل مشاركتها.</p>
+</div>
+</section>
+<section id="how" class="how"><div><span>01</span><h3>حدّد المتوقع</h3><p>أسماء الأصول، لغاتها وصيغها. مقاس مختلف؟ أضفه إلى اسم الأصل.</p></div><div><span>02</span><h3>راجع ما أضفته</h3><p>استبعد النسخ القديمة، وأكمل اللغة والإصدار والحالة لكل ملف.</p></div><div><span>03</span><h3>سلّم بنظام واضح</h3><p>ملفات بأسماء موحّدة وسجل يربط كل اسم جديد بملفه الأصلي.</p></div></section>
+<section class="service"><div><p class="eyebrow">تحتاجها بطريقتك؟</p><h2>قائمة تسليم مناسبة لفريقك.</h2><p>إعداد قائمة وقاعدة تسمية لحملة واحدة، حتى 50 ملفًا، مع فحص أول حزمة ودليل قصير وتعديل واحد. <strong>$25</strong> بعد مراجعة عيّنة واتفاق النطاق؛ خلال يومَي عمل بعد المواد والاتفاق.</p><p class="fine">الخدمة اختيارية. الأداة مجانية. لا تشمل مراجعة محتوى التصميم أو الترجمة أو الطباعة. لمشاريع المنصات، يبقى التواصل والدفع داخل منصتها.</p></div><a class="secondary" href="mailto:hamammalsalmy9@gmail.com?subject=Handoff%20Check%20setup">اسأل عن الإعداد ←</a></section>
+</main>
+<footer><span>تجربة مستقلة من Hazim · بدون تحليلات أو حفظ دائم للملفات</span><a href="https://github.com/ikoomm/services/tree/main/tools/handoff-check">الكود والحدود</a></footer>
+<script type="module" src="app.mjs"></script>
+</body></html>
