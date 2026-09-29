@@ -1,0 +1,7 @@
+id,updated,name,amount
+INV-001,2026-09-20,Alpha Store,120.00
+INV-002,2026-09-22,متجر النور,85.00
+INV-003,2026-09-25,Latest master stays,50.00
+INV-004,2026-09-21,Same timestamp master stays,70.00
+INV-005,2026-09-20,Incoming conflict master stays,90.00
+INV-006,2026-09-20,Unmatched master stays,30.00

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Compare recurring CSV exports by record ID and date. Preview updates, keep your master data, and inspect conflicts locally.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; font-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Export Reconcile — keep the latest, see the changes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#"><span class="brandmark" aria-hidden="true">↔</span>Export Reconcile<span class="version">BETA</span></a><span class="local-badge"><i aria-hidden="true"></i> Files stay in your browser</span></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">FOR THE NEXT EXPORT. AND THE ONE AFTER THAT.</p><h1>Keep the latest.<br><span>See what changed.</span></h1><p class="lede">Update a master CSV from a new export. Match records, review conflicts, then download a fresh copy.</p></div><aside class="privacy-card"><span class="icon" aria-hidden="true">⌁</span><strong>Your files. Your device.</strong><p>No account, upload or analytics.<br>Processing happens here, in this tab.</p><button id="sample" class="text-button">Try the sample data <span aria-hidden="true">↗</span></button></aside></section>
+
+    <section class="workspace" aria-label="CSV comparison workspace">
+      <div class="step-heading"><h2><span class="step">01</span> Choose your files</h2><span class="quiet">UTF-8 CSV · 5 MB combined · 50,000 rows combined</span></div>
+      <div class="file-grid">
+        <label class="file-card" for="master-file"><span class="file-icon" aria-hidden="true">▤</span><span><strong>Master file</strong><small>The data you want to keep and update</small><b id="master-name">Choose a CSV file</b><em id="master-meta">Original file stays untouched</em></span><input id="master-file" type="file" accept=".csv,text/csv" aria-label="Choose master CSV"></label>
+        <label class="file-card" for="incoming-file"><span class="file-icon" aria-hidden="true">＋</span><span><strong>New export</strong><small>The records you want to compare</small><b id="incoming-name">Choose a CSV file</b><em id="incoming-meta">Older records will not replace newer ones</em></span><input id="incoming-file" type="file" accept=".csv,text/csv" aria-label="Choose new export CSV"></label>
+      </div>
+      <div class="rule-row"><div><h2><span class="step">02</span> Match &amp; compare</h2><p class="quiet">Both files need the same columns. Column order may differ.</p></div><div class="selectors"><label for="key-column">Unique record ID<select id="key-column" disabled><option value="">Choose files first</option></select></label><label for="date-column">Updated date<select id="date-column" disabled><option value="">Choose files first</option></select></label></div></div>
+      <div class="action-row"><p>Only a newer date replaces a record.<br><span class="quiet">Equal dates with different values are held for review.</span></p><button id="compare" class="primary" disabled>Preview changes <span aria-hidden="true">→</span></button></div>
+      <div id="status" class="status" role="status" aria-live="polite">Choose two files, or try the synthetic sample.</div>
+    </section>
+
+    <section id="results" class="results" hidden aria-label="Comparison results">
+      <div class="result-heading"><div><p class="eyebrow">PREVIEW BEFORE YOU EXPORT</p><h2>Your update, accounted for.</h2></div><button id="clear" class="secondary">Clear files</button></div>
+      <div id="stats" class="stats"></div>
+      <div id="notice" class="notice" hidden></div>
+      <div class="table-panel"><div class="tabs" role="group" aria-label="Choose result table"><button id="changes-tab" class="selected" aria-pressed="true">Changes</button><button id="issues-tab" aria-pressed="false">Issues</button><button id="output-tab" aria-pressed="false">Updated master</button></div><p id="table-summary" class="table-summary"></p><div id="table-container" class="table-scroll"></div></div>
+      <div class="downloads"><div><h3>Ready for a fresh copy?</h3><p class="quiet">Download all rows. The preview shows the first 100.</p></div><div class="download-buttons"><button id="download-master" class="primary">Download master CSV</button><button id="download-changes" class="secondary">Change log</button><button id="download-issues" class="secondary">Issue log</button></div></div>
+    </section>
+
+    <section class="details"><details><summary>How records are handled</summary><p>IDs are exact, case-sensitive text: <code>001</code> and <code>1</code> are different. Dates must be <code>YYYY-MM-DD</code> or ISO timestamps with <code>Z</code> or an explicit time-zone offset. A date without a time is compared at midnight UTC.</p><p>New IDs are added. Newer records replace the entire master row, including blank values. Records absent from the export stay in the master; nothing is deleted. Repeated incoming IDs use the newest valid date. Conflicting values at the newest date are held for review, not chosen arbitrarily.</p><p>Repeated master IDs stop the comparison. Master rows with missing IDs or invalid dates stay untouched. Invalid incoming rows are skipped and logged. The file row numbers in logs count CSV records, including the header; a quoted multiline cell is one record.</p></details><details><summary>Privacy, limits &amp; spreadsheet safety</summary><p>Files are read in this browser tab and are never uploaded. This tool has no network requests, accounts, storage or analytics. Reload or clear to discard the data. Work from copies and review the output before using it in a production workflow.</p><p>CSV only: comma separators, UTF-8 encoding, one header row, maximum 5 MB and 50,000 data rows combined. Excel workbooks, semicolon-delimited files, fuzzy matching and large payroll workflows are outside this demo.</p><p>For spreadsheet safety, exported cells that could begin a formula are prefixed with an apostrophe. This deliberately also protects values beginning with a minus sign, including negative numbers. A protected value can therefore differ from the raw input. Headers are protected too. Confirm your downstream import rules before reusing an export.</p></details></section>
+    <footer><span>Independent tool by Hazim Alsalmi · v0.1</span><span>Free proof of a repeatable workflow. No client data in the sample.</span></footer>
+  </main>
+  <script src="core.js"></script><script src="app.js"></script>
+</body>
+</html>

@@ -36,6 +36,10 @@ These scopes require a file and workflow review before production availability c
 | [Short video edit](services/10-short-video.md) | $25 |
 | [Small media remux or extraction](services/15-media-remux.md) | $10 |
 
+## Free tools
+
+- [Export Reconcile](tools/export-reconcile/README.md) — compare recurring CSV exports by ID and date, preview updates/conflicts, and download a fresh master. Runs offline in a single HTML file. Optional scoped setup: $25.
+
 ## Work samples
 
 - [20-second vertical website demo: two hook variants](samples/mora-product-ad/README.md) — actual independent UI, MP4 exports and editable composition; no client campaign or conversion claim.

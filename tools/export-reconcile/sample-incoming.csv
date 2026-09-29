@@ -1,0 +1,11 @@
+id,updated,name,amount
+INV-001,2026-09-23,Alpha Store updated,125.00
+INV-001,2026-09-21,Older duplicate ignored,121.00
+INV-002,2026-09-22,متجر النور,85.00
+INV-003,2026-09-24,Older export ignored,45.00
+INV-004,2026-09-21,Same timestamp conflicting text,75.00
+INV-005,2026-09-23,Conflict candidate one,91.00
+INV-005,2026-09-23,Conflict candidate two,92.00
+INV-007,2026-09-23,"New store, north",40.00
+INV-008,2026-02-30,Invalid calendar date,10.00
+,2026-09-23,Missing ID,11.00
