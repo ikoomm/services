@@ -1,0 +1,358 @@
+{
+  "provenance": {
+    "synthetic": true,
+    "brand": "Northstar Demo",
+    "source_note": "Invented weekly analytics fixtures for an independent demonstration. No client data, live account connection, official API execution or live n8n execution is represented.",
+    "construction": "Two complete adjacent Monday-Sunday weeks. Each CSV row is an invented weekly aggregate for one campaign or channel."
+  },
+  "currency": "USD",
+  "timezone": "Asia/Kolkata",
+  "periods": {
+    "previous": {
+      "start": "2026-09-14",
+      "end": "2026-09-20"
+    },
+    "current": {
+      "start": "2026-09-21",
+      "end": "2026-09-27"
+    }
+  },
+  "measurement_notes": {
+    "meta": "Purchases and revenue are synthetic Meta-attributed values. They are not reconciled to a real attribution window or account.",
+    "ga4": "Purchases and revenue are synthetic GA4 channel-attributed values. GA4 and Meta use separate invented measurement totals; do not add them together or interpret their difference as tracking loss.",
+    "financial": "Revenue is a reporting input, not verified receipts or net profit. ROAS equals attributed revenue divided by ad spend; it excludes all non-ad costs.",
+    "comparison": "Descriptive week-over-week arithmetic only; no causal claim or statistical significance inference. Percentage-point changes apply to rates. Percentage change from a zero baseline is undefined."
+  },
+  "calculation_notes": {
+    "precision": "Decimal input arithmetic; currency inputs and totals have two decimal places. Derived values rounded half-up to six decimal places only after calculation.",
+    "weighted_ratios": "Compute all aggregate ratios from summed numerators and denominators, never by averaging campaign/channel ratios.",
+    "missing_data": "Missing or invalid input metrics fail validation; they are never silently replaced with zero.",
+    "zero_baseline": "Undefined ratios and percentage changes are null, with an explicit reason. A zero-to-zero percent change is also undefined.",
+    "rates": "Rates ending in _pct are numeric percentages, not fractions. Rate differences are percentage points.",
+    "purchase_rate_pct": "Purchases divided by sessions times 100; this is an event-per-session calculation, not GA4 session key-event rate or distinct purchasing-session rate."
+  },
+  "meta": {
+    "title": "Meta Ads — weekly performance",
+    "attribution_note": "Purchases and revenue are synthetic Meta-attributed values. They are not reconciled to a real attribution window or account.",
+    "previous": {
+      "totals": {
+        "spend": 420.0,
+        "impressions": 76000,
+        "clicks": 1820,
+        "purchases": 35,
+        "revenue": 1750.0
+      },
+      "ratios": {
+        "ctr_pct": 2.394737,
+        "cpc": 0.230769,
+        "cpm": 5.526316,
+        "cpa": 12.0,
+        "roas": 4.166667
+      },
+      "ratio_notes": {}
+    },
+    "current": {
+      "totals": {
+        "spend": 490.0,
+        "impressions": 88000,
+        "clicks": 2135,
+        "purchases": 46,
+        "revenue": 2300.0
+      },
+      "ratios": {
+        "ctr_pct": 2.426136,
+        "cpc": 0.229508,
+        "cpm": 5.568182,
+        "cpa": 10.652174,
+        "roas": 4.693878
+      },
+      "ratio_notes": {}
+    },
+    "deltas": {
+      "spend": {
+        "absolute": 70.0,
+        "percent_change": 16.666667
+      },
+      "impressions": {
+        "absolute": 12000.0,
+        "percent_change": 15.789474
+      },
+      "clicks": {
+        "absolute": 315.0,
+        "percent_change": 17.307692
+      },
+      "purchases": {
+        "absolute": 11.0,
+        "percent_change": 31.428571
+      },
+      "revenue": {
+        "absolute": 550.0,
+        "percent_change": 31.428571
+      }
+    },
+    "ratio_deltas": {
+      "ctr_pct": {
+        "percentage_points": 0.0314
+      },
+      "cpc": {
+        "absolute": -0.001261,
+        "percent_change": -0.546448
+      },
+      "cpm": {
+        "absolute": 0.041866,
+        "percent_change": 0.757576
+      },
+      "cpa": {
+        "absolute": -1.347826,
+        "percent_change": -11.231884
+      },
+      "roas": {
+        "absolute": 0.527211,
+        "percent_change": 12.653061
+      }
+    },
+    "rows": [
+      {
+        "label": "Prospecting",
+        "previous": {
+          "totals": {
+            "spend": 280.0,
+            "impressions": 56000,
+            "clicks": 1120,
+            "purchases": 14,
+            "revenue": 700.0
+          },
+          "ratios": {
+            "ctr_pct": 2.0,
+            "cpc": 0.25,
+            "cpm": 5.0,
+            "cpa": 20.0,
+            "roas": 2.5
+          },
+          "ratio_notes": {}
+        },
+        "current": {
+          "totals": {
+            "spend": 315.0,
+            "impressions": 63000,
+            "clicks": 1260,
+            "purchases": 18,
+            "revenue": 900.0
+          },
+          "ratios": {
+            "ctr_pct": 2.0,
+            "cpc": 0.25,
+            "cpm": 5.0,
+            "cpa": 17.5,
+            "roas": 2.857143
+          },
+          "ratio_notes": {}
+        }
+      },
+      {
+        "label": "Retargeting",
+        "previous": {
+          "totals": {
+            "spend": 140.0,
+            "impressions": 20000,
+            "clicks": 700,
+            "purchases": 21,
+            "revenue": 1050.0
+          },
+          "ratios": {
+            "ctr_pct": 3.5,
+            "cpc": 0.2,
+            "cpm": 7.0,
+            "cpa": 6.666667,
+            "roas": 7.5
+          },
+          "ratio_notes": {}
+        },
+        "current": {
+          "totals": {
+            "spend": 175.0,
+            "impressions": 25000,
+            "clicks": 875,
+            "purchases": 28,
+            "revenue": 1400.0
+          },
+          "ratios": {
+            "ctr_pct": 3.5,
+            "cpc": 0.2,
+            "cpm": 7.0,
+            "cpa": 6.25,
+            "roas": 8.0
+          },
+          "ratio_notes": {}
+        }
+      }
+    ],
+    "summary": [
+      "Ad spend was $490.00, compared with $420.00 in the previous week.",
+      "Meta-attributed purchases were 46, compared with 35; attributed revenue was $2,300.00 versus $1,750.00.",
+      "Total-based ROAS was 4.69x versus 4.17x. It excludes non-ad costs and does not measure profit."
+    ]
+  },
+  "ga4": {
+    "title": "GA4 — weekly acquisition",
+    "attribution_note": "Purchases and revenue are synthetic GA4 channel-attributed values. GA4 and Meta use separate invented measurement totals; do not add them together or interpret their difference as tracking loss.",
+    "previous": {
+      "totals": {
+        "sessions": 3400,
+        "engaged_sessions": 2020,
+        "purchases": 57,
+        "revenue": 2850.0
+      },
+      "ratios": {
+        "engagement_rate_pct": 59.411765,
+        "purchase_rate_pct": 1.676471,
+        "revenue_per_session": 0.838235
+      },
+      "ratio_notes": {}
+    },
+    "current": {
+      "totals": {
+        "sessions": 3850,
+        "engaged_sessions": 2468,
+        "purchases": 72,
+        "revenue": 3600.0
+      },
+      "ratios": {
+        "engagement_rate_pct": 64.103896,
+        "purchase_rate_pct": 1.87013,
+        "revenue_per_session": 0.935065
+      },
+      "ratio_notes": {}
+    },
+    "deltas": {
+      "sessions": {
+        "absolute": 450.0,
+        "percent_change": 13.235294
+      },
+      "engaged_sessions": {
+        "absolute": 448.0,
+        "percent_change": 22.178218
+      },
+      "purchases": {
+        "absolute": 15.0,
+        "percent_change": 26.315789
+      },
+      "revenue": {
+        "absolute": 750.0,
+        "percent_change": 26.315789
+      }
+    },
+    "ratio_deltas": {
+      "engagement_rate_pct": {
+        "percentage_points": 4.692131
+      },
+      "purchase_rate_pct": {
+        "percentage_points": 0.193659
+      },
+      "revenue_per_session": {
+        "absolute": 0.09683,
+        "percent_change": 11.551606
+      }
+    },
+    "rows": [
+      {
+        "label": "Direct",
+        "previous": {
+          "totals": {
+            "sessions": 600,
+            "engaged_sessions": 300,
+            "purchases": 9,
+            "revenue": 450.0
+          },
+          "ratios": {
+            "engagement_rate_pct": 50.0,
+            "purchase_rate_pct": 1.5,
+            "revenue_per_session": 0.75
+          },
+          "ratio_notes": {}
+        },
+        "current": {
+          "totals": {
+            "sessions": 650,
+            "engaged_sessions": 338,
+            "purchases": 10,
+            "revenue": 500.0
+          },
+          "ratios": {
+            "engagement_rate_pct": 52.0,
+            "purchase_rate_pct": 1.538462,
+            "revenue_per_session": 0.769231
+          },
+          "ratio_notes": {}
+        }
+      },
+      {
+        "label": "Organic Search",
+        "previous": {
+          "totals": {
+            "sessions": 1200,
+            "engaged_sessions": 840,
+            "purchases": 26,
+            "revenue": 1300.0
+          },
+          "ratios": {
+            "engagement_rate_pct": 70.0,
+            "purchase_rate_pct": 2.166667,
+            "revenue_per_session": 1.083333
+          },
+          "ratio_notes": {}
+        },
+        "current": {
+          "totals": {
+            "sessions": 1400,
+            "engaged_sessions": 1050,
+            "purchases": 34,
+            "revenue": 1700.0
+          },
+          "ratios": {
+            "engagement_rate_pct": 75.0,
+            "purchase_rate_pct": 2.428571,
+            "revenue_per_session": 1.214286
+          },
+          "ratio_notes": {}
+        }
+      },
+      {
+        "label": "Paid Social",
+        "previous": {
+          "totals": {
+            "sessions": 1600,
+            "engaged_sessions": 880,
+            "purchases": 22,
+            "revenue": 1100.0
+          },
+          "ratios": {
+            "engagement_rate_pct": 55.0,
+            "purchase_rate_pct": 1.375,
+            "revenue_per_session": 0.6875
+          },
+          "ratio_notes": {}
+        },
+        "current": {
+          "totals": {
+            "sessions": 1800,
+            "engaged_sessions": 1080,
+            "purchases": 28,
+            "revenue": 1400.0
+          },
+          "ratios": {
+            "engagement_rate_pct": 60.0,
+            "purchase_rate_pct": 1.555556,
+            "revenue_per_session": 0.777778
+          },
+          "ratio_notes": {}
+        }
+      }
+    ],
+    "summary": [
+      "GA4 sessions were 3,850, compared with 3,400 in the previous week.",
+      "Engaged sessions were 2,468 of 3,850: 64.10% engagement, a 4.69 percentage-point change.",
+      "GA4-attributed purchases were 72 versus 57; revenue was $3,600.00 versus $2,850.00. These totals are separate from Meta attribution."
+    ]
+  }
+}

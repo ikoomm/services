@@ -1,0 +1,7 @@
+period_start,period_end,channel,currency,timezone,synthetic,sessions,engaged_sessions,purchases,revenue
+2026-09-14,2026-09-20,Paid Social,USD,Asia/Kolkata,true,1600,880,22,1100.00
+2026-09-14,2026-09-20,Organic Search,USD,Asia/Kolkata,true,1200,840,26,1300.00
+2026-09-14,2026-09-20,Direct,USD,Asia/Kolkata,true,600,300,9,450.00
+2026-09-21,2026-09-27,Paid Social,USD,Asia/Kolkata,true,1800,1080,28,1400.00
+2026-09-21,2026-09-27,Organic Search,USD,Asia/Kolkata,true,1400,1050,34,1700.00
+2026-09-21,2026-09-27,Direct,USD,Asia/Kolkata,true,650,338,10,500.00

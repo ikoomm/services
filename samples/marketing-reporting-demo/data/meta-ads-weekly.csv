@@ -1,0 +1,5 @@
+period_start,period_end,campaign,currency,timezone,synthetic,spend,impressions,clicks,purchases,revenue
+2026-09-14,2026-09-20,Prospecting,USD,Asia/Kolkata,true,280.00,56000,1120,14,700.00
+2026-09-14,2026-09-20,Retargeting,USD,Asia/Kolkata,true,140.00,20000,700,21,1050.00
+2026-09-21,2026-09-27,Prospecting,USD,Asia/Kolkata,true,315.00,63000,1260,18,900.00
+2026-09-21,2026-09-27,Retargeting,USD,Asia/Kolkata,true,175.00,25000,875,28,1400.00

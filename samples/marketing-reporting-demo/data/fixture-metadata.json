@@ -1,0 +1,24 @@
+{
+  "provenance": {
+    "synthetic": true,
+    "brand": "Northstar Demo",
+    "source_note": "Invented weekly analytics fixtures for an independent demonstration. No client data, live account connection, official API execution or live n8n execution is represented.",
+    "construction": "Two complete adjacent Monday-Sunday weeks. Each CSV row is an invented weekly aggregate for one campaign or channel."
+  },
+  "currency": "USD",
+  "timezone": "Asia/Kolkata",
+  "periods": {
+    "previous": {"start": "2026-09-14", "end": "2026-09-20"},
+    "current": {"start": "2026-09-21", "end": "2026-09-27"}
+  },
+  "sources": {
+    "meta": "meta-ads-weekly.csv",
+    "ga4": "ga4-acquisition-weekly.csv"
+  },
+  "measurement_notes": {
+    "meta": "Purchases and revenue are synthetic Meta-attributed values. They are not reconciled to a real attribution window or account.",
+    "ga4": "Purchases and revenue are synthetic GA4 channel-attributed values. GA4 and Meta use separate invented measurement totals; do not add them together or interpret their difference as tracking loss.",
+    "financial": "Revenue is a reporting input, not verified receipts or net profit. ROAS equals attributed revenue divided by ad spend; it excludes all non-ad costs.",
+    "comparison": "Descriptive week-over-week arithmetic only; no causal claim or statistical significance inference. Percentage-point changes apply to rates. Percentage change from a zero baseline is undefined."
+  }
+}
