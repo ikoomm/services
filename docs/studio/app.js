@@ -1,0 +1,16 @@
+/* Local opt-in measurement only. No network analytics, IDs or brief storage. */
+'use strict';
+const $=id=>document.getElementById(id);let enabled=false,counts={},brief=null;
+try{enabled=localStorage.getItem('alsalmi-preview-consent')==='yes';if(enabled)counts=StudioCore.cleanCounts(JSON.parse(localStorage.getItem('alsalmi-preview-counts')||'{}'));}catch{counts={};}
+function showCounts(){if($('analyticsStatus'))$('analyticsStatus').textContent=enabled?'Local measurement on. '+Object.entries(counts).map(([k,v])=>k+': '+v).join(' آ· '):'Local measurement off.';}
+function record(name){if(!enabled)return;counts=StudioCore.addEvent(counts,name);try{localStorage.setItem('alsalmi-preview-counts',JSON.stringify(counts));}catch{}showCounts();}
+function download(name,text){const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function invalidateDraft(){brief=null;if($('draft')){$('draft').hidden=true;$('draftText').textContent='';$('emailLink').removeAttribute('href');$('formStatus').textContent='';}}
+const hints={creative:'One product story, two hooks, clear source formats.',web:'One responsive page, five sections, supplied content.',automation:'One source, five agreed metrics, one report.'};
+if($('service')){$('service').addEventListener('change',()=>{$('scopeHint').textContent=hints[$('service').value];record('service_choose');});}
+document.querySelectorAll('[data-service]').forEach(a=>a.addEventListener('click',()=>{invalidateDraft();$('service').value=a.dataset.service;$('scopeHint').textContent=hints[a.dataset.service];record('service_choose');}));
+document.querySelectorAll('a[href^="work/"]').forEach(a=>a.addEventListener('click',()=>record('work_open')));
+if($('briefForm')){$('briefForm').addEventListener('submit',e=>{e.preventDefault();try{brief=StudioCore.makeBrief(Object.fromEntries(new FormData(e.target)));$('draftText').textContent=brief.body;$('emailLink').href=StudioCore.mailto(brief);$('draft').hidden=false;$('formStatus').textContent='Draft ready to review. Nothing sent.';record('brief_preview');}catch(error){$('formStatus').textContent=error.message;}});$('emailLink').addEventListener('click',()=>record('email_open'));$('downloadBrief').addEventListener('click',()=>{if(brief){download('alsalmi-project-brief.txt',brief.body);record('brief_download');}});}
+if($('analyticsConsent')){$('analyticsConsent').checked=enabled;$('analyticsConsent').addEventListener('change',e=>{enabled=e.target.checked;try{if(enabled)localStorage.setItem('alsalmi-preview-consent','yes');else{localStorage.removeItem('alsalmi-preview-consent');localStorage.removeItem('alsalmi-preview-counts');counts={};}}catch{}showCounts();});$('exportEvents').addEventListener('click',()=>download('local-preview-counts.json',JSON.stringify({scope:'This browser only; not site traffic, leads or revenue',counts},null,2)));$('clearEvents').addEventListener('click',()=>{counts={};try{localStorage.removeItem('alsalmi-preview-counts');}catch{}showCounts();});showCounts();}
+
+if($('briefForm')){$('briefForm').addEventListener('input',invalidateDraft);$('briefForm').addEventListener('change',invalidateDraft);$('briefFields').disabled=false;$('reviewBrief').disabled=false;}

@@ -1,0 +1,15 @@
+{
+  "owned_existing_artifacts": {
+    "mora-mobile.png": "portfolio-ready\\06-mora-product-ad\\mora-mobile-hero.png",
+    "mora-contact-sheet.jpg": "portfolio-ready\\06-mora-product-ad\\contact-sheet.jpg",
+    "reconcile.png": "product-experiments\\export-reconcile\\preview-desktop.png"
+  },
+  "fonts": {
+    "dm-sans.ttf": "https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/DMSans%5Bopsz,wght%5D.ttf",
+    "newsreader.ttf": "https://raw.githubusercontent.com/google/fonts/main/ofl/newsreader/Newsreader%5Bopsz,wght%5D.ttf",
+    "OFL-DMSans.txt": "https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/OFL.txt",
+    "OFL-Newsreader.txt": "https://raw.githubusercontent.com/google/fonts/main/ofl/newsreader/OFL.txt"
+  },
+  "mark": "Original simple letterform by Hazim Alsalmi studio preview; not trademark registration",
+  "screenshots": "Pre-existing verified artifacts; not new studio-page browser captures"
+}
