@@ -54,7 +54,7 @@ Have a recurring export you want configured? The introductory quote is **$25**, 
 - A configured standalone HTML workflow you can reuse, a checked first result with change/issue logs, and one short instruction guide.
 - One revision within the agreed scope; delivery within **two business days after scope agreement and receipt of the required files**.
 
-To check fit, send **five anonymized sample rows**, the column headers, and the ID/date columns you want to use to **[hamammalsalmy9@gmail.com](mailto:hamammalsalmy9@gmail.com)** or contact **[Hazim on Ko-fi](https://ko-fi.com/ikoomm)**. Do not send confidential data in a public comment. The free app remains available without buying the service.
+To check fit, send **five anonymized sample rows**, the column headers, and the ID/date columns you want to use to **[hamammalsalmy9@gmail.com](mailto:hamammalsalmy9@gmail.com)** or use **[Custom setup — $25 on Ko-fi](https://ko-fi.com/c/79e4c86823)** to review the service and contact Hazim before ordering. Do not send confidential data in a public comment. The free app remains available without buying the service.
 
 ## Source and license
 
