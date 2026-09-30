@@ -1,5 +1,5 @@
 (function(root){'use strict';
-const services={creative:'Creative & content',web:'Web & conversion',automation:'Automation & reporting'};
+const services={creative:'Ad creatives & product video',web:'Websites',games:'3D & Roblox',automation:'Automation & reporting'};
 function clean(value,max){return String(value||'').replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g,'').trim().slice(0,max);}
 function makeBrief(input){const service=Object.hasOwn(services,input.service)?input.service:'automation';const problem=clean(input.problem,1200);if(problem.length<15)throw new Error('Please describe the result you need in at least 15 characters.');const lines=['Hello Hazim,','',`Service: ${services[service]}`,`What I need: ${problem}`,`Budget: ${clean(input.budget,80)||'To discuss'}`,`Deadline: ${clean(input.deadline,80)||'Flexible'}`,`Public link / format: ${clean(input.source,300)||'To discuss'}`,'','Please check fit and confirm scope before we start.'];return{service,subject:`Project brief — ${services[service]}`,body:lines.join('\n')};}
 function mailto(brief){return'mailto:hamammalsalmy9@gmail.com?subject='+encodeURIComponent(brief.subject)+'&body='+encodeURIComponent(brief.body);}

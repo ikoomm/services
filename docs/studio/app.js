@@ -6,7 +6,7 @@ function showCounts(){if($('analyticsStatus'))$('analyticsStatus').textContent=e
 function record(name){if(!enabled)return;counts=StudioCore.addEvent(counts,name);try{localStorage.setItem('alsalmi-preview-counts',JSON.stringify(counts));}catch{}showCounts();}
 function download(name,text){const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function invalidateDraft(){brief=null;if($('draft')){$('draft').hidden=true;$('draftText').textContent='';$('emailLink').removeAttribute('href');$('formStatus').textContent='';}}
-const hints={creative:'One product story, two hooks, clear source formats.',web:'One responsive page, five sections, supplied content.',automation:'One source, five agreed metrics, one report.'};
+const hints={creative:'Three ads or one product video from your real product pages.',web:'One responsive page, built from your public details.',automation:'One source, five agreed metrics, one report.',games:'Icons, trailers, 3D assets or a retention audit.'};
 if($('service')){$('service').addEventListener('change',()=>{$('scopeHint').textContent=hints[$('service').value];record('service_choose');});}
 document.querySelectorAll('[data-service]').forEach(a=>a.addEventListener('click',()=>{invalidateDraft();$('service').value=a.dataset.service;$('scopeHint').textContent=hints[a.dataset.service];record('service_choose');}));
 document.querySelectorAll('a[href^="work/"]').forEach(a=>a.addEventListener('click',()=>record('work_open')));
