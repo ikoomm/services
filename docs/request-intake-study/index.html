@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Request ready check · KOOM</title>
+<style>
+:root{color-scheme:light;--ink:#15322f;--muted:#60746e;--line:#dce5df;--paper:#f5f7f2;--teal:#075e50;--wash:#e8f1e9;--amber:#845916}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);font:15px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink)}
+button,textarea,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed}a{color:inherit}
+header{border-bottom:1px solid var(--line);background:#fff}header>div{max-width:1200px;margin:auto;padding:22px 36px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.wordmark{font-size:23px;font-weight:850;letter-spacing:-1.5px}.brand-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#a1b62f;margin-left:4px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:1.8px;font-weight:750;color:var(--muted)}
+.top-note{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}.live-dot{width:7px;height:7px;border-radius:50%;background:#809872}
+main{max-width:1200px;margin:auto;padding:40px 36px 32px}.hero{display:flex;justify-content:space-between;gap:40px;align-items:flex-end;margin-bottom:29px}
+h1{font-size:clamp(30px,4vw,44px);line-height:1.08;font-weight:650;letter-spacing:-1.9px;margin:11px 0 13px}p{margin:0}.intro{color:var(--muted);max-width:550px;font-size:15px;line-height:1.7}
+.hero-tag{flex-shrink:0;background:#fff;border:1px solid var(--line);padding:14px 18px;border-radius:12px;font-size:12px;color:var(--muted)}.hero-tag strong{display:block;font-size:13px;color:var(--ink);margin-bottom:2px}
+.steps{display:flex;gap:24px;margin:0 0 30px;padding:0;list-style:none;font-size:12px;color:var(--muted)}.steps li{display:flex;align-items:center;gap:8px}.steps span{display:grid;place-items:center;height:24px;width:24px;border:1px solid #becdc3;border-radius:50%;color:var(--teal);font-size:11px;font-weight:700}
+.workspace{display:grid;grid-template-columns:1.08fr 1fr;gap:22px;align-items:start}.panel{border:1px solid var(--line);background:#fff;border-radius:17px;overflow:hidden;box-shadow:0 5px 15px #163b2304}.panel-head{padding:22px 24px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:14px}.panel-head h2{font-size:17px;font-weight:650;letter-spacing:-.35px;margin:0}.micro{font-size:11px;letter-spacing:.3px;color:var(--muted)}
+.scenarios{padding:19px 22px 0;display:flex;gap:7px;flex-wrap:wrap}.scenario{border:1px solid var(--line);color:var(--muted);background:#fff;padding:8px 10px;border-radius:7px;font-size:11px;font-weight:600}.scenario[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:white}
+.editor{padding:19px 24px 22px}.editor label{font-size:12px;display:block;font-weight:650;margin-bottom:9px}.editor textarea{display:block;width:100%;min-height:275px;resize:vertical;border:1px solid var(--line);border-radius:9px;background:#fbfcf9;color:#334d44;padding:17px;font:12px/1.9 ui-monospace,SFMono-Regular,Consolas,monospace}
+.hint{font-size:11px;color:var(--muted);margin-top:10px;line-height:1.6}.source-meta{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:13px 24px;background:#fcfdfb;font-size:11px;color:var(--muted);gap:12px}.source-meta strong{font-weight:600;color:#426254}
+.result-body{padding:20px 24px 23px}.status{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;border-radius:30px;background:#e6f2e9;color:#276542;padding:5px 10px;white-space:nowrap}.status.blocked{background:#fff1db;color:var(--amber)}.status:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.draft-title{font-size:24px;letter-spacing:-.75px;font-weight:650;margin:0 0 4px}.draft-ref{font:11px ui-monospace,monospace;color:var(--muted);margin-bottom:18px}
+dl{margin:0;display:grid;grid-template-columns:105px 1fr;column-gap:12px;font-size:12px}dt,dd{padding:10px 0;border-top:1px solid #edf0e9}dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere;font-weight:550}.note-box{margin:14px 0 17px;background:#f5f7f2;border-radius:8px;padding:13px;font-size:12px;color:#53675f;white-space:pre-wrap;overflow-wrap:anywhere}
+.checks{border:1px solid #dce9df;border-radius:9px;background:#f4faf5;padding:13px 14px;margin:0 0 17px}.checks.blocked{border-color:#efddbc;background:#fffbf2}.checks strong{font-size:12px;font-weight:650;display:block}.checks p,.checks ul{font-size:11px;color:var(--muted);margin:5px 0 0}.checks ul{padding-left:18px}.checks li+li{margin-top:4px}
+.review{display:flex;gap:9px;align-items:flex-start;font-size:11px;line-height:1.6;color:#546a5f;margin:0 0 14px}.review input{accent-color:var(--teal);margin:3px 0 0;width:15px;height:15px;flex-shrink:0}.prepare{width:100%;border:0;border-radius:9px;padding:13px 16px;background:var(--teal);color:white;font-size:12px;font-weight:650;display:flex;justify-content:space-between;align-items:center}.prepare:disabled{background:#e8eee7;color:#7c8b7d}
+.safe-note{margin-top:9px;text-align:center;font-size:10px;color:var(--muted)}
+.output{margin-top:18px;border-top:1px solid var(--line);padding-top:16px}.output h3{font-size:13px;margin:0 0 5px}.output p{font-size:11px;color:var(--muted)}pre{font:10px/1.7 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid var(--line);background:#f6f8f3;border-radius:8px;padding:12px}
+footer{max-width:1200px;margin:auto;padding:0 36px 30px}.disclosure{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:11px;line-height:1.8;display:grid;grid-template-columns:1fr 1.8fr;gap:30px}.disclosure strong{display:block;color:var(--ink);font-size:12px;font-weight:600}.scope{color:#687b72}
+:focus-visible{outline:3px solid #acbd52;outline-offset:3px}textarea:focus-visible{outline-offset:1px}[hidden]{display:none!important}
+@media(max-width:780px){header>div{padding:18px 20px}main{padding:28px 20px 25px}.hero{display:block;margin-bottom:22px}.hero-tag{display:none}.workspace{grid-template-columns:1fr}.steps{gap:14px;flex-wrap:wrap;font-size:11px;margin-bottom:23px}.panel-head,.editor{padding-left:20px;padding-right:20px}.result-body{padding-left:20px;padding-right:20px}footer{padding:0 20px 24px}.disclosure{grid-template-columns:1fr;gap:10px}h1{letter-spacing:-1.3px}.top-note{font-size:10px}.editor textarea{min-height:255px}}
+</style>
+</head>
+<body>
+<header><div><div class="wordmark" aria-label="KOOM">koom<span class="brand-dot" aria-hidden="true"></span></div><div class="top-note"><span class="live-dot" aria-hidden="true"></span>Independent workflow study</div></div></header>
+<main>
+<section class="hero" aria-labelledby="page-title"><div><div class="eyebrow">Facilities request intake</div><h1 id="page-title">Request ready check.</h1><p class="intro">Turn a labelled request into a clear job draft.<br>Catch missing details and duplicate references before someone acts.</p></div><div class="hero-tag"><strong>Small proof. Clear handoff.</strong>Input → checks → human review</div></section>
+<ol class="steps" aria-label="Workflow"><li><span>1</span>Read the request</li><li><span>2</span>Check the details</li><li><span>3</span>Review the draft</li></ol>
+<div class="workspace">
+<section class="panel" aria-labelledby="input-title">
+<div class="panel-head"><h2 id="input-title">Incoming request</h2><span class="micro">SYNTHETIC EMAIL</span></div>
+<div class="scenarios" role="group" aria-label="Choose a synthetic example"><button class="scenario" type="button" data-scenario="ready" aria-pressed="true">Complete request</button><button class="scenario" type="button" data-scenario="missing" aria-pressed="false">Missing details</button><button class="scenario" type="button" data-scenario="duplicate" aria-pressed="false">Duplicate reference</button></div>
+<div class="editor"><label for="request">Request text · editable</label><textarea id="request" spellcheck="false" aria-describedby="parser-hint"></textarea><p class="hint" id="parser-hint">Try changing a date or removing a field. This demo reads the labels shown above; it does not infer meaning from unstructured email.</p></div>
+<div class="source-meta"><span>Fixed demo review date <strong>10 Oct 2026</strong></span><span>Local register <strong>SR-1041</strong></span></div>
+</section>
+<section class="panel" aria-labelledby="draft-heading">
+<div class="panel-head"><h2 id="draft-heading">Proposed job draft</h2><span id="status" class="status" aria-live="polite"></span></div>
+<div class="result-body">
+<p id="service" class="draft-title"></p><p id="reference" class="draft-ref"></p>
+<dl><dt>Site</dt><dd id="site"></dd><dt>Requested date</dt><dd id="date"></dd><dt>Time window</dt><dd id="time"></dd><dt>Contact</dt><dd id="contact"></dd></dl>
+<div class="note-box" id="details"></div>
+<div id="checks" class="checks" aria-live="polite"><strong id="check-title"></strong><p id="check-summary"></p><ul id="exceptions"></ul></div>
+<label class="review"><input type="checkbox" id="reviewed"><span>I have reviewed this synthetic request and its draft. No real booking or dispatch will be created.</span></label>
+<button id="prepare" class="prepare" type="button" disabled><span>Prepare local draft</span><span aria-hidden="true">↗</span></button>
+<p class="safe-note">Stays in this page. Nothing is sent or saved.</p>
+<section id="output" class="output" aria-live="polite" hidden><h3>Local draft prepared</h3><p>Neutral JSON preview for discussion — not a BigChange API payload.</p><pre id="json"></pre></section>
+</div>
+</section>
+</div>
+</main>
+<footer><div class="disclosure"><div><strong>Independent AI-assisted prototype</strong>Synthetic data. Deterministic checks. Manual review.</div><p class="scope">No live BigChange or Microsoft 365 connection, email access, booking or API call. Labels and draft fields are illustrative, not a native integration schema. Production work would require an agreed workflow, authorized access and field mapping.</p></div></footer>
+<script src="intake.js"></script>
+<script>
+(function () {
+  "use strict";
+  const api = window.KOOMIntake;
+  const el = id => document.getElementById(id);
+  const request = el("request");
+  const reviewed = el("reviewed");
+  let analysis;
+  function render() {
+    analysis = api.analyze(request.value);
+    reviewed.checked = false;
+    reviewed.disabled = !analysis.ready;
+    el("prepare").disabled = true;
+    el("output").hidden = true;
+    el("json").textContent = "";
+    const fields = analysis.fields;
+    el("service").textContent = fields.service || "Service not supplied";
+    el("reference").textContent = fields.reference || "Reference not supplied";
+    [["site","site"],["date","requestedDate"],["time","timeWindow"],["contact","contact"]].forEach(pair => {
+      el(pair[0]).textContent = fields[pair[1]] || "Not supplied";
+    });
+    el("details").textContent = fields.details || "No additional details supplied.";
+    el("status").textContent = analysis.ready ? "Ready for review" : "Needs attention";
+    el("status").classList.toggle("blocked", !analysis.ready);
+    el("checks").classList.toggle("blocked", !analysis.ready);
+    el("check-title").textContent = analysis.ready ? "Required fields passed" : analysis.errors.length + " exception" + (analysis.errors.length === 1 ? "" : "s") + " to resolve";
+    el("check-summary").textContent = analysis.ready ? "Date, time, contact format and local reference check passed. Human review still required." : "The draft is blocked until these details are corrected.";
+    const list = el("exceptions");
+    list.replaceChildren();
+    analysis.errors.forEach(error => {
+      const item = document.createElement("li");
+      item.textContent = error.message;
+      list.appendChild(item);
+    });
+    list.hidden = analysis.ready;
+  }
+  document.querySelectorAll("[data-scenario]").forEach(button => {
+    button.addEventListener("click", () => {
+      const scenario = api.scenarios.find(item => item.id === button.dataset.scenario);
+      request.value = scenario.text;
+      document.querySelectorAll("[data-scenario]").forEach(item => item.setAttribute("aria-pressed", String(item === button)));
+      render();
+    });
+  });
+  request.addEventListener("input", () => {
+    document.querySelectorAll("[data-scenario]").forEach(item => item.setAttribute("aria-pressed", "false"));
+    render();
+  });
+  reviewed.addEventListener("change", () => {
+    el("prepare").disabled = !analysis.ready || !reviewed.checked;
+    el("output").hidden = true;
+    el("json").textContent = "";
+  });
+  el("prepare").addEventListener("click", () => {
+    // Revalidate current text at the action, not only at input time.
+    const current = api.analyze(request.value);
+    if (!current.ready || !reviewed.checked) { render(); return; }
+    const draft = api.prepareDraft(current, reviewed.checked);
+    el("json").textContent = JSON.stringify(draft, null, 2);
+    el("output").hidden = false;
+  });
+  request.value = api.scenarios[0].text;
+  render();
+})();
+</script>
+</body>
+</html>
+
