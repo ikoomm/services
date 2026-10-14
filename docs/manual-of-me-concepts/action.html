@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="A fictional Manual of Me report, explored through a seven-day action journal. Independent design concept by KOOM.">
+  <meta name="theme-color" content="#392536">
+  <title>A week that fits — Manual of Me</title>
+  <link rel="stylesheet" href="action.css">
+  <script src="action.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#journal">Skip to the journal</a>
+  <header class="masthead">
+    <a class="wordmark" href="index.html" aria-label="Manual of Me — compare concepts">Manual <em>of</em> Me<span class="mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M7 7h9a9 9 0 0 1 0 18H7V7Z"/><path d="M16 7v18M7 16h18"/></svg></span></a>
+    <nav aria-label="Design concepts"><a href="editorial.html">Personal manual</a><a href="guided.html">Guided discovery</a><a href="action.html" aria-current="page">Seven-day journal</a></nav>
+  </header>
+  <div class="concept-note"><strong>Independent concept C</strong><span>Fictional participant · illustrative content · not approved JZPT branding</span></div>
+  <main id="journal">
+    <section class="opening" aria-labelledby="opening-title">
+      <div class="opening-copy">
+        <h1 id="opening-title">A week that<br><em>leaves room</em><br>for you.</h1>
+        <p class="intro" id="personal-intro">A fictional weekly journal for Sam. One small experiment, with a gentler version for the days that change.</p>
+        <div class="opening-links"><a class="primary-link" href="#your-week">Plan the seven days <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a class="text-link" href="#full-report">Read the full report</a></div>
+      </div>
+      <aside class="experiment-note" aria-labelledby="experiment-title">
+        <span class="paper-fold" aria-hidden="true"></span>
+        <h2 id="experiment-title">A smaller starting point.</h2>
+        <p id="experiment-description">Loading the shared fictional report…</p>
+        <div class="experiment-fit"><h3>Why this fits your answers</h3><p id="experiment-why"></p><div id="experiment-evidence"></div></div>
+        <p class="quiet-note">An experiment to learn from. No result is promised.</p>
+      </aside>
+    </section>
+    <div id="load-error" class="load-error" hidden role="alert"><h2>The report could not load.</h2><p>Please reload this page. The journal needs its local report-data.json file.</p><button type="button" id="reload-report">Reload report</button></div>
+    <div id="report-content" hidden>
+      <section class="week-section" id="your-week" aria-labelledby="week-title">
+        <div class="section-heading"><div><h2 id="week-title">Try it. Notice it.<br><em>Make it yours.</em></h2><p>Seven days to explore what is repeatable, not to earn a perfect week.</p></div><div class="week-legend"><span class="legend-dot" aria-hidden="true"></span><p>Nothing is marked in advance.<br>Your demo marks stay in this browser.</p></div></div>
+        <div class="plan-choice"><p id="planning-label">How would you like to approach the week?</p><div role="group" aria-labelledby="planning-label"><button type="button" class="choice selected" data-mode="steady" aria-pressed="true">See the daily prompts</button><button type="button" class="choice" data-mode="small" aria-pressed="false">Show fallback prompts</button></div></div>
+        <p class="planning-note" id="planning-note">Use each day as a prompt. You can move the experiment to suit your actual week.</p>
+        <div class="week-days" id="week-days" aria-label="Seven-day experiment"></div>
+        <div class="checklist-bottom"><p id="checklist-status" aria-live="polite">0 of 7 days marked as tried</p><button type="button" class="reset-button" id="reset-marks" disabled>Clear demo marks</button></div>
+        <p class="storage-note" id="storage-note">This is a sample checklist, not recorded participant progress. It sends nothing to a server.</p>
+      </section>
+      <section class="alternatives" aria-labelledby="alternative-title"><div><h2 id="alternative-title">When the day changes,<br><em>the plan can too.</em></h2><p>A useful plan includes the inconvenient days.</p></div><div id="if-then-rules" class="rule-list"></div></section>
+      <section class="reflection" aria-labelledby="reflection-title"><div class="reflection-symbol" aria-hidden="true"><svg viewBox="0 0 76 76" fill="none"><path d="M16 38h44M38 16v44M23 23l30 30M23 53l30-30"/><circle cx="38" cy="38" r="29"/></svg></div><div><h2 id="reflection-title">At the end, get curious.</h2><p id="week-review"></p><p class="quiet-note">A missed day is information. It is not evidence that you have failed.</p></div></section>
+      <section class="full-report" id="full-report" aria-labelledby="report-title"><div class="section-heading"><div><h2 id="report-title">The thinking behind<br><em>your next step.</em></h2><p>All ten report sections. Open a reflection to see what supports it and what is still uncertain.</p></div><button type="button" class="expand-button" id="expand-report" aria-expanded="false">Open all sections</button></div><div class="section-list" id="section-list"></div></section>
+      <section class="source-section" aria-labelledby="source-title"><details><summary><span><h2 id="source-title">Meet fictional Sam</h2><span>The sample answers used throughout all three concepts</span></span><span class="details-icon" aria-hidden="true"></span></summary><div id="source-answers" class="source-answers"></div></details></section>
+    </div>
+  </main>
+  <footer><p>Manual of Me <span>Independent design study by KOOM</span></p><p>Fictional data. No diagnosis, live AI, booking or tracking.</p><a href="manual.pdf" download="Manual-of-Me-fictional-Sam.pdf">Download Sam’s sample PDF</a><a href="index.html">Compare all three concepts</a></footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "demo": true,
+  "disclaimer": "Design concept · Fictional example",
+  "productTitle": "Manual of Me",
+  "heroTitle": "Make room for the week you actually have.",
+  "heroDescription": "A few patterns from your answers, and one small experiment to explore.",
+  "persona": {
+    "name": "Sam",
+    "goal": "Build a routine that still fits when work gets busy, without waiting for a fresh week to restart.",
+    "answers": [
+      {"id": "Q1", "question": "What would you like to change?", "text": "I want a routine I can keep during busy weeks. I would like movement to feel like part of my week rather than another project to restart."},
+      {"id": "Q2", "question": "What has happened with previous plans?", "text": "I usually start with three 45-minute evening workouts. After two or three weeks, late meetings get in the way and I stop."},
+      {"id": "Q3", "question": "What tends to disrupt your plans?", "text": "My work hours change. A meeting can be added near the end of the day, so I cannot promise the same finish time."},
+      {"id": "Q4", "question": "What happens after you miss a session?", "text": "When I miss a session, I often decide I will start again properly on Monday."},
+      {"id": "Q5", "question": "What already feels easier to begin?", "text": "I enjoy a relaxed weekend walk. It is easy to start because I do not need equipment or a perfect time slot."},
+      {"id": "Q6", "question": "Where might a smaller activity fit?", "text": "On two mornings next week, I can probably find ten minutes before work. I have not tried using that time for a walk yet."},
+      {"id": "Q7", "question": "What would you prefer to try first?", "text": "For now, I would rather try a short walk I already feel comfortable doing than commit to a new gym plan."},
+      {"id": "Q8", "question": "How would you prefer to reflect on the experiment?", "text": "A quick note about what got in the way would be easier for me to keep than tracking lots of numbers."}
+    ]
+  },
+  "sections": [
+    {
+      "id": "A", "title": "Your personal starting point", "kind": "reported",
+      "body": "You want a routine that still fits when work gets busy. Your previous plan asked for three 45-minute evenings each week; late meetings often interrupted it. For now, you would prefer a short, familiar walk over starting another gym plan.",
+      "bullets": ["What matters to you: a routine you can return to without waiting for a fresh week."],
+      "evidence": ["Q1", "Q2", "Q3", "Q7"]
+    },
+    {
+      "id": "B", "title": "What your answers reveal", "kind": "observation",
+      "body": "Three observations connect directly to what you described.",
+      "bullets": [
+        "Your evening plans compete with changing work hours. You described late meetings interrupting the time you had set aside.",
+        "A missed session sometimes becomes a delayed restart. You said you often wait until Monday to begin again.",
+        "Low-preparation movement already feels easier to begin. Your weekend walk needs little setup, and you would like to try something similarly simple."
+      ],
+      "evidence": ["Q2", "Q3", "Q4", "Q5", "Q7"],
+      "items": [
+        {"title": "Changing work hours", "text": "Your evening plans compete with meetings that can be added at short notice.", "evidence": ["Q2", "Q3"], "kind": "observation"},
+        {"title": "A delayed restart", "text": "You often wait until Monday after a missed session.", "evidence": ["Q4"], "kind": "observation"},
+        {"title": "An easier beginning", "text": "A familiar walk needs little preparation and already appeals to you.", "evidence": ["Q5", "Q7"], "kind": "observation"}
+      ]
+    },
+    {
+      "id": "C", "title": "Why previous attempts may have been difficult", "kind": "hypothesis",
+      "body": "Your plan depended on a clear 45-minute evening window, while your work could change at short notice. That mismatch may have made the plan difficult to repeat. Waiting until Monday after a missed session may also have extended the interruption. These are possible explanations from your answers. We have not established whether other factors also played a part.",
+      "evidence": ["Q2", "Q3", "Q4"]
+    },
+    {
+      "id": "D", "title": "Your potential blind spots", "kind": "hypothesis",
+      "body": "Could the size of the planned session be making it harder to return? You described both a 45-minute plan and a habit of restarting “properly.” It may be worth exploring whether a smaller version would still feel worthwhile to you.",
+      "bullets": ["A morning window is a possibility, not yet a pattern. You identified two likely ten-minute openings. Trying one would tell us more than assuming it will fit."],
+      "evidence": ["Q2", "Q4", "Q6"]
+    },
+    {
+      "id": "E", "title": "What could work better for you", "kind": "recommendation",
+      "body": "Try planning two short, familiar walks in the morning windows you identified. Choose a backup window at the same time, so a disrupted day already has an alternative. Keep the question small: “Did this fit my real week?” A brief note about what helped or got in the way will be more useful for this experiment than a demanding tracking system.",
+      "evidence": ["Q3", "Q5", "Q6", "Q7", "Q8"]
+    },
+    {
+      "id": "F", "title": "Your stepping stones", "kind": "recommendation",
+      "body": "Start with three small actions. Adjust the plan from what you learn.",
+      "bullets": [
+        "Choose two openings. Pick the two mornings you expect to have ten minutes, plus one backup window.",
+        "Make starting simple. Choose a familiar route and put what you need by the door.",
+        "Leave one honest note. After each planned attempt, write what happened—even if the walk did not happen."
+      ],
+      "evidence": ["Q5", "Q6", "Q7", "Q8"]
+    },
+    {
+      "id": "G", "title": "Your personal if-then rules", "kind": "recommendation",
+      "body": "These are draft rules to try and refine, not statements about what you already do.",
+      "bullets": [
+        "If a late meeting removes my planned evening time, then I will look at my next agreed backup window.",
+        "If I miss a planned walk, then I will note the obstacle and choose the next suitable opportunity instead of automatically waiting until Monday.",
+        "If a morning window proves unrealistic, then I will change the timing before making the activity longer."
+      ],
+      "evidence": ["Q2", "Q3", "Q4", "Q6", "Q8"]
+    },
+    {
+      "id": "H", "title": "Your seven-day experiment", "kind": "recommendation",
+      "body": "One question: can two short, familiar walks fit around a changing work week? What counts as useful is an honest observation about whether the plan fits. This experiment does not promise a particular fitness result.",
+      "bullets": [
+        "Day 1 — Choose. Select two likely ten-minute windows and one backup.",
+        "Days 2–3 — Try the first window. If it fits, take the familiar walk you chose. If it does not, note the obstacle and consider your backup.",
+        "Day 4 — Adjust one thing. Review your note. Keep or change the timing; do not add a more demanding plan.",
+        "Days 5–6 — Try the second window. Use what you learned from the first attempt.",
+        "Day 7 — Review. What did you try? What happened? What helped? What got in the way? What would you change next week?"
+      ],
+      "evidence": ["Q5", "Q6", "Q7", "Q8"],
+      "plan": [
+        {"label": "Day 1", "title": "Choose", "text": "Select two likely ten-minute windows and one backup.", "status": "planned"},
+        {"label": "Days 2–3", "title": "Try", "text": "Try your first window. If it does not fit, note the obstacle and consider your backup.", "status": "planned"},
+        {"label": "Day 4", "title": "Adjust", "text": "Review your note. Keep or change the timing; do not add a more demanding plan.", "status": "planned"},
+        {"label": "Days 5–6", "title": "Try again", "text": "Try the second window using what you learned from the first attempt.", "status": "planned"},
+        {"label": "Day 7", "title": "Reflect", "text": "What did you try, what happened, and what would you change next week?", "status": "planned"}
+      ]
+    },
+    {
+      "id": "I", "title": "Open questions", "kind": "unknown",
+      "body": "A useful report can leave questions open.",
+      "bullets": [
+        "Will the two morning windows remain available in a busy week? We have not tested that yet.",
+        "Would a different backup time fit better than mornings?",
+        "What would make a short session feel worthwhile enough to repeat?",
+        "Are there other constraints you would want to discuss before choosing a routine?"
+      ],
+      "evidence": ["Q3", "Q4", "Q6"]
+    },
+    {
+      "id": "J", "title": "The next step with JZPT", "kind": "recommendation",
+      "body": "You can try this experiment on your own. If you would like to explore what fits your life with someone, a Transformation Blueprint session can build on these observations and help shape a realistic next step.",
+      "evidence": [],
+      "cta": {"label": "Explore a Transformation Blueprint session", "demoMessage": "Design preview. No appointment will be booked from this example.", "secondaryLabel": "Keep my manual"}
+    }
+  ]
+}

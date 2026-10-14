@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A fictional Manual of Me report, explored one thoughtful chapter at a time. An independent guided discovery design concept.">
+  <meta name="theme-color" content="#f2f6fc">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Guided discovery · Manual of Me</title>
+  <link rel="preload" href="../studio/assets/dm-sans.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="../studio/assets/newsreader.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="guided.css">
+  <script src="guided.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#chapter-title">Skip to your chapter</a>
+  <div class="concept-notice">Design concept · Fictional example <span>Provisional identity. No live assessment.</span></div>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Manual of Me, all design concepts">Manual of Me<span aria-hidden="true">.</span></a>
+    <nav class="concept-links" aria-label="Design concepts">
+      <a href="editorial.html">Personal manual</a>
+      <a href="guided.html" aria-current="page">Guided discovery</a>
+      <a href="action.html">Seven-day journal</a>
+    </nav>
+    <a class="print-button" id="print-report" href="manual.pdf" download="Manual-of-Me-sample.pdf" aria-label="Download sample PDF">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 8V3h10v5M7 17H4V8h16v9h-3M7 14h10v7H7z"/><path d="M16 11h1"/></svg>
+      <span>Download sample PDF</span>
+    </a>
+  </header>
+
+  <div class="discovery-layout">
+    <aside class="chapter-sidebar" aria-label="Your report chapters">
+      <div class="sidebar-intro">
+        <p class="prepared-for" id="prepared-for">Your personal manual</p>
+        <p class="sidebar-heading">A little more<br>understanding.</p>
+        <p class="sidebar-copy">Take it one thought at a time.<br>Every chapter is yours to explore.</p>
+      </div>
+      <nav id="chapter-nav" class="chapter-nav" aria-label="Jump to a chapter"></nav>
+      <a class="full-manual-link" href="editorial.html">Prefer to read it all? <span>View the full manual <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></span></a>
+    </aside>
+
+    <main id="main" class="reading-space">
+      <div class="chapter-position" aria-live="polite" aria-atomic="true">
+        <span id="chapter-position">Loading your example…</span>
+        <div class="chapter-track" id="chapter-track" aria-hidden="true"></div>
+      </div>
+      <div class="reading-area" id="reading-area" aria-busy="true">
+        <article class="chapter" id="chapter">
+          <h1 id="chapter-title" tabindex="-1">Make room for the week you actually have.</h1>
+          <p class="loading-copy">Opening a fictional example of your personal manual.</p>
+        </article>
+      </div>
+      <div class="chapter-controls" id="chapter-controls" hidden>
+        <button type="button" id="previous-chapter" class="back-button"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 10H4m5-5-5 5 5 5"/></svg> Previous chapter</button>
+        <button type="button" id="next-chapter" class="next-button"><span>Next chapter</span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></button>
+      </div>
+      <p class="reading-note">Something here is a possibility, not a conclusion? You’ll see that clearly. Your words and our suggestions stay distinct.</p>
+    </main>
+  </div>
+
+  <footer class="site-footer"><a href="index.html">Compare all three concepts</a><p>Independent design study by KOOM. Fictional content; proposed visual identity.</p></footer>
+  <div id="print-document" class="print-document" aria-hidden="true"></div>
+  <noscript><div class="noscript-message">This guided view needs JavaScript to change chapters. <a href="editorial.html">Open the full personal manual.</a></div></noscript>
+</body>
+</html>
