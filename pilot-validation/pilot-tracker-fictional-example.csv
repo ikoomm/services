@@ -1,0 +1,9 @@
+prospect_id,segment,city,source_url,stage,first_contact_date,last_follow_up_date,reply_date,test_scheduled_date,test_completed_date,feedback_received_date,consent_to_contact,status_notes
+F001,event_host,Fictional City A,https://example.invalid/fictional-host-01,feedback_received,2030-04-01,,2030-04-02,2030-04-03,2030-04-03,2030-04-04,fictional_yes,FICTIONAL ONLY; tested event setup; feedback recorded; do not contact
+F002,local_vendor,Fictional City A,https://example.invalid/fictional-vendor-02,test_completed,2030-04-01,2030-04-02,2030-04-02,2030-04-04,2030-04-04,,fictional_yes,FICTIONAL ONLY; completed listing task; feedback not yet received; do not contact
+F003,event_host,Fictional City B,https://example.invalid/fictional-host-03,test_scheduled,2030-04-02,,2030-04-03,2030-04-06,,,fictional_yes,FICTIONAL ONLY; future session booked; no completed test; do not contact
+F004,local_vendor,Fictional City B,https://example.invalid/fictional-vendor-04,responded,2030-04-02,,2030-04-04,,,,fictional_yes,FICTIONAL ONLY; requested prototype details; no session booked; do not contact
+F005,event_host,Fictional City A,https://example.invalid/fictional-host-05,contacted,2030-04-02,2030-04-04,,,,,fictional_yes,FICTIONAL ONLY; no reply recorded; do not contact
+F006,local_vendor,Fictional City B,https://example.invalid/fictional-vendor-06,opted_out,2030-04-01,,2030-04-03,,,,fictional_withdrawn,FICTIONAL ONLY; declined further contact; suppress all outreach; do not contact
+F007,event_host,Fictional City B,https://example.invalid/fictional-host-07,shortlisted,,,,,,,not_requested,FICTIONAL ONLY; not contacted; permission and audience review pending; do not contact
+F008,local_vendor,Fictional City A,https://example.invalid/fictional-vendor-08,feedback_received,2030-04-01,,2030-04-02,2030-04-03,2030-04-03,2030-04-05,fictional_yes,FICTIONAL ONLY; tested service discovery; feedback recorded; do not contact

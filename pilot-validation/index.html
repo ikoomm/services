@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Independent fictional pilot participation tracker by ikoom, with editable CSV templates for outreach, prototype testing and structured feedback.">
+  <title>Pilot participation tracker · ikoom</title>
+  <style>
+    :root{--paper:#f4f2eb;--surface:#fffefa;--ink:#172d2b;--muted:#506360;--line:#ccd3cc;--green:#285c4d;--wash:#e3ebe3;--warn:#744322;--warn-bg:#f4e6d4;--radius:8px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Arial,Helvetica,sans-serif}a{color:var(--green);text-underline-offset:4px}a:hover{text-decoration-thickness:2px}a:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--warn);outline-offset:5px}::selection{background:#c5d8bc;color:var(--ink)}.skip{position:absolute;top:-80px;left:16px;background:var(--surface);padding:12px;z-index:4}.skip:focus{top:12px}.shell{max-width:1120px;margin:auto;padding:0 40px}header{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}.brand{font-family:Georgia,serif;font-size:27px;letter-spacing:-1px;font-weight:700}.header-note{font-size:13px;color:var(--muted)}h1,h2,h3,p{margin:0}h1{font:normal clamp(34px,4.2vw,54px)/1.08 Georgia,'Times New Roman',serif;letter-spacing:-.025em;max-width:650px;text-wrap:balance}h2{font:normal 28px/1.2 Georgia,'Times New Roman',serif;letter-spacing:-.5px}h3{font-size:16px;line-height:1.3}.intro{padding:40px 0 26px;display:grid;grid-template-columns:1.3fr .7fr;gap:44px;align-items:end}.intro p{color:var(--muted);max-width:65ch;margin-top:16px}.download-primary{display:inline-flex;justify-content:center;padding:13px 20px;background:var(--green);color:white;border:1px solid var(--green);border-radius:var(--radius);font-weight:700;text-decoration:none}.download-primary:hover{background:#1d483d;color:#fff}.intro aside{padding-bottom:3px}.small{font-size:13px;color:var(--muted)}.intro aside p{margin:10px 0 0}.notice{padding:15px 18px;border:1px solid #cdb898;border-radius:var(--radius);background:var(--warn-bg);color:var(--warn);font-size:14px}.notice strong{display:block;margin-bottom:2px}.section{padding:32px 0;border-bottom:1px solid var(--line)}.section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:18px}.snapshot-date{font-size:13px;color:var(--muted);white-space:nowrap}.metrics{display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.metric{padding:20px;border-right:1px solid var(--line)}.metric:last-child{border:0}.metric h3{font-size:14px;color:var(--muted);font-weight:normal}.metric .value{font-size:34px;line-height:1.2;letter-spacing:-1px;font-variant-numeric:tabular-nums;font-weight:700;margin:6px 0}.metric p{font-size:13px;color:var(--muted)}.metric .fraction{font-size:14px;color:var(--ink);margin-top:6px}.method{font-size:13px;color:var(--muted);margin-top:14px;max-width:90ch}.schedule{display:flex;gap:12px;align-items:baseline;background:var(--wash);padding:12px 16px;margin-top:14px;border-radius:var(--radius);font-size:14px}.schedule strong{white-space:nowrap}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);scrollbar-color:#8caaa0 var(--paper)}table{border-collapse:collapse;width:100%;font-size:14px;min-width:760px;text-align:left}caption{text-align:left;padding:15px 18px;color:var(--muted);font-size:13px;border-bottom:1px solid var(--line)}th{font-size:12px;letter-spacing:.02em;font-weight:700;background:#e9ede7;color:var(--muted)}th,td{padding:12px 16px;border-bottom:1px solid #e0e5de;vertical-align:top}tr:last-child td{border-bottom:0}td{font-variant-numeric:tabular-nums}.stage{display:inline-block;padding:3px 8px;background:var(--wash);border-radius:4px;white-space:nowrap;font-size:12px}.stage.pending{background:#eeeae0}.stage.stop{background:var(--warn-bg);color:var(--warn)}.column-pair{display:grid;grid-template-columns:1fr 1fr;gap:48px}.column-pair h2{margin-bottom:18px}.definition{display:grid;grid-template-columns:126px 1fr;gap:8px;padding:9px 0;border-top:1px solid var(--line);font-size:14px}.definition dt{font-weight:700}.definition dd{margin:0;color:var(--muted)}.steps{list-style:none;margin:0;padding:0;counter-reset:day}.steps li{padding:11px 0;border-top:1px solid var(--line);font-size:14px}.steps strong{display:block;margin-bottom:3px}.steps span{color:var(--muted)}.downloads{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.download-item{border-top:2px solid var(--green);padding-top:15px}.download-item a{font-weight:700}.download-item p{color:var(--muted);font-size:14px;margin-top:6px}.rules{padding-top:26px;max-width:90ch}.rules p{font-size:14px;color:var(--muted);margin:8px 0}.rules strong{color:var(--ink)}footer{display:flex;justify-content:space-between;gap:24px;padding:24px 0 32px;font-size:12px;color:var(--muted)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}noscript p{padding:16px;background:var(--warn-bg)}
+    @media(max-width:760px){.shell{padding:0 22px}.intro{grid-template-columns:1fr;gap:22px;padding-top:30px}.intro aside{display:flex;align-items:center;gap:18px}.intro aside p{margin:0;max-width:210px}.metrics{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}.column-pair{grid-template-columns:1fr;gap:32px}.downloads{grid-template-columns:1fr;gap:24px}.section-heading{align-items:flex-start;flex-direction:column;gap:7px}.schedule{display:block}.schedule strong{display:block;margin-bottom:3px}footer{flex-direction:column;gap:8px}}
+    @media(max-width:420px){.shell{padding:0 16px}header{gap:12px}.header-note{text-align:right;max-width:165px}.intro aside{display:block}.intro aside p{margin-top:10px;max-width:none}.metric{padding:16px}.definition{grid-template-columns:112px 1fr}.metric .value{font-size:30px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{body{background:white}.shell{max-width:none;padding:0}header,.intro{padding-top:12px}.download-primary{color:var(--ink);background:white}.table-wrap{overflow:visible}table{min-width:0;font-size:11px}th,td{padding:6px}.section{break-inside:avoid}.skip{display:none}a{color:var(--ink)}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to tracker</a>
+  <div class="shell">
+    <header><span class="brand">ikoom</span><span class="header-note">Independent sample · fictional data</span></header>
+    <main id="main">
+      <section class="intro" aria-labelledby="title">
+        <div><h1 id="title">Pilot participation tracker</h1><p>A small, clear working kit for an event-host and local-vendor pilot. Track targeted outreach, prototype sessions and feedback without confusing a booking with a completed test.</p></div>
+        <aside aria-label="Start with the template"><a class="download-primary" href="pilot-tracker-template.csv" download>Download blank tracker</a><p class="small">Editable CSV for your spreadsheet app. Work locally without uploading participant data.</p></aside>
+      </section>
+      <div class="notice"><strong>Fictional demonstration. Do not contact these records.</strong>Every prospect, city and date below is invented. This independent sample is not client work, an active campaign, or evidence of recruitment results.</div>
+      <section class="section" aria-labelledby="snapshot-title">
+        <div class="section-heading"><h2 id="snapshot-title">One pilot, a traceable count</h2><p class="snapshot-date">Fictional snapshot · 5 April 2030</p></div>
+        <div class="metrics" id="metrics" aria-label="Fictional pilot metrics"></div>
+        <p class="method">Counts use recorded milestone dates, not just the current stage. A reply includes a decline or opt-out; it does not mean interest. These are descriptive example ratios, not conversion claims or forecasts.</p>
+        <div class="schedule" id="schedule"></div>
+        <noscript><p>JavaScript is disabled. The fictional CSV contains the complete example. Its counts are 8 prospects, 7 contacted, 6 replied, 4 ever scheduled, 3 tests completed and 2 feedback records received.</p></noscript>
+      </section>
+      <section class="section" aria-labelledby="records-title">
+        <div class="section-heading"><h2 id="records-title">The eight example records</h2><a href="pilot-tracker-fictional-example.csv" download>Download fictional data</a></div>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Fictional participant table; scroll horizontally on small screens">
+          <table><caption>Dates are fictional. A dash means no event recorded. Full fields and notes are in the CSV.</caption><thead><tr><th scope="col">Prospect</th><th scope="col">Segment</th><th scope="col">Current stage</th><th scope="col">Reply</th><th scope="col">Scheduled</th><th scope="col">Completed</th><th scope="col">Feedback</th></tr></thead><tbody id="records"></tbody></table>
+        </div>
+      </section>
+      <section class="section column-pair" aria-label="Stage definitions and pilot plan">
+        <div><h2>What each stage means</h2><dl>
+          <div class="definition"><dt>Shortlisted</dt><dd>Potential fit only. No message sent; audience and permission review still required.</dd></div>
+          <div class="definition"><dt>Contacted</dt><dd>Approved first message sent and dated. A follow-up does not add another prospect.</dd></div>
+          <div class="definition"><dt>Responded</dt><dd>A reply arrived. Record intent in notes; a reply alone is not participation.</dd></div>
+          <div class="definition"><dt>Test scheduled</dt><dd>A session date is booked. Keep completion blank until the agreed test actually happens.</dd></div>
+          <div class="definition"><dt>Test completed</dt><dd>The agreed prototype task was attempted and its outcome recorded, even if the task failed.</dd></div>
+          <div class="definition"><dt>Feedback received</dt><dd>A feedback record was received and linked by prospect ID. A request for feedback does not count.</dd></div>
+          <div class="definition"><dt>Opted out</dt><dd>Stop further outreach. Record the withdrawal and preserve only the minimum suppression record.</dd></div>
+        </dl></div>
+        <div><h2>A practical first week</h2><ol class="steps">
+          <li><strong>Day 1 · Agree the pilot</strong><span>Confirm the audience, cities, prototype tasks, approved message, contact rules, feedback permission and what counts as a completed test.</span></li>
+          <li><strong>Day 2 · Prepare and review</strong><span>Build a small relevant shortlist with source links. Deduplicate and check the suppression list. Get the client’s approval before outreach.</span></li>
+          <li><strong>Days 3–4 · Invite and schedule</strong><span>Send approved individual invitations through agreed channels. Log replies, opt-outs and actual bookings. Follow up only within the agreed cadence.</span></li>
+          <li><strong>Days 4–5 · Test and learn</strong><span>Run available self-guided or agreed live sessions; record the prototype version, task outcome and observed friction. Request structured feedback with permission.</span></li>
+          <li><strong>Day 7 · Review the evidence</strong><span>Report each denominator, unresolved sessions and recurring feedback themes. Agree whether weeks 2–4 should continue, change audience or refine the prototype.</span></li>
+        </ol><p class="method">Sequence adapts to availability. No guaranteed participant count or response rate.</p></div>
+      </section>
+      <section class="section" aria-labelledby="downloads-title">
+        <div class="section-heading"><h2 id="downloads-title">Take the working files</h2><span class="small">Three portable CSV files</span></div>
+        <div class="downloads">
+          <div class="download-item"><a href="pilot-tracker-template.csv" download>Blank participation tracker</a><p>Header-only template. One unique prospect per row; dates use YYYY-MM-DD.</p></div>
+          <div class="download-item"><a href="pilot-tracker-fictional-example.csv" download>Eight-row fictional example</a><p>The exact data behind this page. Includes withdrawn consent and a scheduled session that has not happened.</p></div>
+          <div class="download-item"><a href="feedback-template.csv" download>Blank feedback log</a><p>Link feedback by prospect ID. Separate observed behaviour, optional quotes and requested improvements.</p></div>
+        </div>
+        <div class="rules"><h3>Before using this with real people</h3><p><strong>Approve first.</strong> Replace all fictional records. Use a client-approved audience, source list, message and outreach channel; establish the appropriate permission to contact. A public source URL is not consent.</p><p><strong>Respect opt-outs.</strong> Offer a clear way to decline. Stop immediately after withdrawal. Do not enter personal emails, phone numbers, sensitive details or private recordings in this shared tracker; keep any necessary contact data in an approved access-controlled system.</p><p><strong>Keep evidence precise.</strong> In the feedback log use task outcomes such as completed, blocked or not attempted. Mark suggested explanations as hypotheses. Obtain permission for quotes or recordings, and agree access and retention before collecting real feedback.</p></div>
+      </section>
+    </main>
+    <footer><span>ikoom · Independent pilot-operations sample</span><span>No client affiliation · No real contacts · No outreach sent</span></footer>
+  </div>
+  <script id="pilot-data" type="application/json">[{"prospect_id":"F001","segment":"event_host","city":"Fictional City A","source_url":"https://example.invalid/fictional-host-01","stage":"feedback_received","first_contact_date":"2030-04-01","last_follow_up_date":"","reply_date":"2030-04-02","test_scheduled_date":"2030-04-03","test_completed_date":"2030-04-03","feedback_received_date":"2030-04-04","consent_to_contact":"fictional_yes","status_notes":"FICTIONAL ONLY; tested event setup; feedback recorded; do not contact"},{"prospect_id":"F002","segment":"local_vendor","city":"Fictional City A","source_url":"https://example.invalid/fictional-vendor-02","stage":"test_completed","first_contact_date":"2030-04-01","last_follow_up_date":"2030-04-02","reply_date":"2030-04-02","test_scheduled_date":"2030-04-04","test_completed_date":"2030-04-04","feedback_received_date":"","consent_to_contact":"fictional_yes","status_notes":"FICTIONAL ONLY; completed listing task; feedback not yet received; do not contact"},{"prospect_id":"F003","segment":"event_host","city":"Fictional City B","source_url":"https://example.invalid/fictional-host-03","stage":"test_scheduled","first_contact_date":"2030-04-02","last_follow_up_date":"","reply_date":"2030-04-03","test_scheduled_date":"2030-04-06","test_completed_date":"","feedback_received_date":"","consent_to_contact":"fictional_yes","status_notes":"FICTIONAL ONLY; future session booked; no completed test; do not contact"},{"prospect_id":"F004","segment":"local_vendor","city":"Fictional City B","source_url":"https://example.invalid/fictional-vendor-04","stage":"responded","first_contact_date":"2030-04-02","last_follow_up_date":"","reply_date":"2030-04-04","test_scheduled_date":"","test_completed_date":"","feedback_received_date":"","consent_to_contact":"fictional_yes","status_notes":"FICTIONAL ONLY; requested prototype details; no session booked; do not contact"},{"prospect_id":"F005","segment":"event_host","city":"Fictional City A","source_url":"https://example.invalid/fictional-host-05","stage":"contacted","first_contact_date":"2030-04-02","last_follow_up_date":"2030-04-04","reply_date":"","test_scheduled_date":"","test_completed_date":"","feedback_received_date":"","consent_to_contact":"fictional_yes","status_notes":"FICTIONAL ONLY; no reply recorded; do not contact"},{"prospect_id":"F006","segment":"local_vendor","city":"Fictional City B","source_url":"https://example.invalid/fictional-vendor-06","stage":"opted_out","first_contact_date":"2030-04-01","last_follow_up_date":"","reply_date":"2030-04-03","test_scheduled_date":"","test_completed_date":"","feedback_received_date":"","consent_to_contact":"fictional_withdrawn","status_notes":"FICTIONAL ONLY; declined further contact; suppress all outreach; do not contact"},{"prospect_id":"F007","segment":"event_host","city":"Fictional City B","source_url":"https://example.invalid/fictional-host-07","stage":"shortlisted","first_contact_date":"","last_follow_up_date":"","reply_date":"","test_scheduled_date":"","test_completed_date":"","feedback_received_date":"","consent_to_contact":"not_requested","status_notes":"FICTIONAL ONLY; not contacted; permission and audience review pending; do not contact"},{"prospect_id":"F008","segment":"local_vendor","city":"Fictional City A","source_url":"https://example.invalid/fictional-vendor-08","stage":"feedback_received","first_contact_date":"2030-04-01","last_follow_up_date":"","reply_date":"2030-04-02","test_scheduled_date":"2030-04-03","test_completed_date":"2030-04-03","feedback_received_date":"2030-04-05","consent_to_contact":"fictional_yes","status_notes":"FICTIONAL ONLY; tested service discovery; feedback recorded; do not contact"}]</script>
+  <script>
+    const rows = JSON.parse(document.getElementById('pilot-data').textContent);
+    const count = field => rows.filter(row => Boolean(row[field])).length;
+    const contacted = count('first_contact_date');
+    const responded = count('reply_date');
+    const scheduled = count('test_scheduled_date');
+    const completed = count('test_completed_date');
+    const feedback = count('feedback_received_date');
+    const percent = (value, denominator) => denominator ? `${Math.round(value / denominator * 100)}%` : '—';
+    const metrics = [
+      ['Contacted', contacted, rows.length, 'listed prospects', 'Unique prospects reached'],
+      ['Responded', responded, contacted, 'contacted', 'Includes one opt-out'],
+      ['Tests completed', completed, responded, 'responded', 'An actual prototype session'],
+      ['Feedback received', feedback, completed, 'tests completed', 'Receipt date recorded']
+    ];
+    const container = document.getElementById('metrics');
+    metrics.forEach(([label, value, denominator, denominatorLabel, note]) => {
+      const item = document.createElement('div');
+      item.className = 'metric';
+      const title = document.createElement('h3'); title.textContent = label;
+      const number = document.createElement('div'); number.className = 'value'; number.textContent = `${value}`;
+      const fraction = document.createElement('p'); fraction.className = 'fraction'; fraction.textContent = `${value} / ${denominator} ${denominatorLabel} · ${percent(value, denominator)}`;
+      const detail = document.createElement('p'); detail.textContent = note;
+      item.append(title, number, fraction, detail); container.append(item);
+    });
+    const pending = rows.filter(row => row.test_scheduled_date && !row.test_completed_date).length;
+    const schedule = document.getElementById('schedule');
+    const scheduleLabel = document.createElement('strong'); scheduleLabel.textContent = `${scheduled} sessions ever scheduled`;
+    const scheduleNote = document.createElement('span'); scheduleNote.textContent = `${completed} completed; ${pending} still pending. A scheduled session is not counted as a completed test.`;
+    schedule.append(scheduleLabel, scheduleNote);
+    const labels = {shortlisted:'Shortlisted',contacted:'Contacted',responded:'Responded',test_scheduled:'Test scheduled',test_completed:'Test completed',feedback_received:'Feedback received',opted_out:'Opted out'};
+    const dateLabel = value => value ? `Apr ${Number(value.slice(-2))}` : '—';
+    const tbody = document.getElementById('records');
+    rows.forEach(row => {
+      const tr = document.createElement('tr');
+      const values = [row.prospect_id, row.segment === 'event_host' ? 'Event host' : 'Local vendor', labels[row.stage], dateLabel(row.reply_date), dateLabel(row.test_scheduled_date), dateLabel(row.test_completed_date), dateLabel(row.feedback_received_date)];
+      values.forEach((value, index) => {
+        const td = document.createElement(index === 0 ? 'th' : 'td');
+        if (index === 0) {td.scope = 'row'; td.style.background = 'transparent';}
+        if (index === 2) {const badge = document.createElement('span'); badge.className = `stage${row.stage === 'opted_out' ? ' stop' : ['contacted','shortlisted','test_scheduled'].includes(row.stage) ? ' pending' : ''}`; badge.textContent = value; td.append(badge);} else {td.textContent = value;}
+        tr.append(td);
+      });
+      tbody.append(tr);
+    });
+  </script>
+</body>
+</html>
